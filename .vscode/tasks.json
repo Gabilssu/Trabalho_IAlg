@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar Projeto",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-g3",
+                "main.cpp",
+                "inicializarVetor.cpp",
+                "redimensionar.cpp",
+                "carregarArquivo.cpp",
+                "salvarArquivo.cpp",
+                "mostrarElemento.cpp",
+                "-o",
+                "output/main.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
