@@ -5,7 +5,10 @@ string padronizar(string texto)
 {
     for(int i = 0; i < texto.size(); i++)
     {
-        texto[i] = tolower(texto[i]);
+        if (texto[i]>='A' && texto[i]<='Z')
+        {
+            texto[i] = tolower(texto[i]);
+        }
     }
 
     return texto;
