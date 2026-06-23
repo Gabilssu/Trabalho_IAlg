@@ -10,6 +10,7 @@
 #include "inserirOrdenado.h"
 #include "criarNovoPersonagem.h"
 #include "buscaElemento.h"
+#include "buscaBinaria.h"
 
 using namespace std;
 int main()
@@ -91,10 +92,11 @@ int main()
                 cin >> opcaoBusca;
                 if (opcaoBusca == 1)
                 {
-                    cout << "Qual id devo buscar?" << endl;
+                    cout << "Qual id devo buscar? (Apenas números inteiros positivos)" << endl;
                     cin >> comparador;
-                    buscarElementoIterativo(vetor, comparador, 1, quantidade);
+                    buscarBinaria(vetor, comparador, quantidade);
                     cout << endl;
+                    opcaoBusca = 6;
                 }
                 else if (opcaoBusca == 2)
                 {
@@ -102,6 +104,7 @@ int main()
                     cin >> comparador;
                     buscarElementoIterativo(vetor, comparador, 2, quantidade);
                     cout << endl;
+                    opcaoBusca = 6;
                 }
                 else if (opcaoBusca == 3)
                 {
@@ -109,6 +112,7 @@ int main()
                     cin >> comparador;
                     buscarElementoIterativo(vetor, comparador, 3, quantidade);
                     cout << endl;
+                    opcaoBusca = 6;
                 }
                 else if (opcaoBusca == 4)
                 {
@@ -116,6 +120,7 @@ int main()
                     cin >> comparador;
                     buscarElementoIterativo(vetor, comparador, 4, quantidade);
                     cout << endl;
+                    opcaoBusca = 6;
                 }
                 else if (opcaoBusca == 5)
                 {
@@ -123,6 +128,7 @@ int main()
                     cin >> comparador;
                     buscarElementoIterativo(vetor, comparador, 5, quantidade);
                     cout << endl;
+                    opcaoBusca = 6;
                 }
                 else if (opcaoBusca != 6)
                 {
@@ -145,7 +151,7 @@ int main()
         else
         {
             cout << "Opção inválida!" << endl;
-            cout << "Digite apenas valores válidos (1-4)" << endl;
+            cout << "Digite apenas valores válidos (1-5)" << endl;
         }
     }
 

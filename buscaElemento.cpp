@@ -25,21 +25,13 @@ void aparecerDados (Personagem *&vetor,
 void buscarElementoIterativo(Personagem *&vetor,
                             string &comparador,
                             int tipo,
-                            int quantidade)
+                            int &quantidade)
 {
     bool achou = false;
     comparador = padronizar(comparador);
     for(int i = 0; i < quantidade; i++)
     {
-        if (tipo==1)
-        {
-            if(padronizar(to_string(vetor[i].identificador)) == comparador)
-            {
-                aparecerDados(vetor, i);
-                achou = true;
-            }
-        }
-        else if (tipo==2)
+        if (tipo==2)
         {
              if(padronizar(vetor[i].nome) == comparador)
             {

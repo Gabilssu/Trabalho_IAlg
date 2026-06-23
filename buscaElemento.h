@@ -6,5 +6,5 @@
 void buscarElementoIterativo(Personagem *&vetor,
                             string &comparador,
                             int tipo,
-                            int quantidade);
+                            int &quantidade);
 #endif
