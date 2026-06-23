@@ -1,40 +1,38 @@
 // Remoção Logica e Fisica de Personagens
 #include <iostream>
-#include "main.cpp"
-#include "personagem.h"
+#include "Remover.h"
 using namespace std;
 
-void remover(Personagem vetor[], int &quantidade, int identificador)
-{
-    bool encontrado = false;
+void removerLogico(Personagem vetor[], int quantidade, int identificador){
+
     for (int i = 0; i < quantidade; i++)
     {
         if (vetor[i].identificador == identificador)
         {
-            encontrado = true;
             vetor[i].identificador = -1;
-            cout << "Personagem com identificador " << identificador << " removido logicamente." << endl;
-
+            cout << "Personagem marcado como removido." << endl;
+            return;
         }
     }
 
-    if (!encontrado)
-    {
-        cout << "Personagem com identificador " << identificador << " nao encontrado." << endl;
-    }
+    cout << "Personagem com identificador " << identificador
+         << " nao encontrado." << endl;
 }
 
-void removerFisico(Personagem vetor[], int &quantidade)
-{
-    int novoTamanho = 0;
+void removerFisico(Personagem vetor[], int &quantidade){
+
+    int novaQuantidade = 0;
+
     for (int i = 0; i < quantidade; i++)
     {
-        if (vetor[i].identificador != -1) 
+        if (vetor[i].identificador != -1)
         {
-            vetor[novoTamanho] = vetor[i];
-            novoTamanho++;
+            vetor[novaQuantidade] = vetor[i];
+            novaQuantidade++;
         }
     }
-    quantidade = novoTamanho;
-    cout << "Remocao fisica concluida." << quantidade << endl;
+
+    quantidade = novaQuantidade;
+
+    cout << "Remocao fisica realizada com sucesso." << endl;
 }

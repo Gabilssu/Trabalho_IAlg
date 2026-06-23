@@ -11,6 +11,8 @@
 #include "criarNovoPersonagem.h"
 #include "buscaElemento.h"
 #include "buscaBinaria.h"
+#include "Ordenacao.h"
+#include "Remover.h"
 
 using namespace std;
 int main()
@@ -32,14 +34,16 @@ int main()
                     quantidade,
                     capacidade);
 
-    while (opcao !=5)
+    while (opcao != 7)
     {
         cout << endl << "Digite o número referente ao que você deseja fazer: "<< endl;
         cout << "1 - Inserir elemento" << endl;
         cout << "2 - Mostrar elementos" << endl;
         cout << "3 - Buscar elementos" << endl;
         cout << "4 - Salvar arquivo" << endl;
-        cout << "5 - Sair" << endl;
+        cout << "5 - Ordenar elementos" << endl;
+        cout << "6 - Remover elementos" << endl;
+        cout << "7 - Sair" << endl;
         cin >> opcao;
         if (opcao == 1)
         {
@@ -143,6 +147,28 @@ int main()
             salvarArquivo("saida.csv", vetor, quantidade);
         }
         else if (opcao == 5)
+        {
+            int criterio;
+            cout << "Escolha o critério de ordenação:" << endl;
+            cout << "1 - Identificador" << endl;
+            cout << "2 - Nome" << endl;
+            cout << "3 - Título do desenho" << endl;
+            cout << "4 - Criador" << endl;
+            cout << "5 - Espécie" << endl;
+            cin >> criterio;
+
+            ordenar(vetor, quantidade, criterio);
+            cout << "Elementos ordenados com sucesso!" << endl;
+        }
+        
+        else if (opcao == 6)
+        {
+            int indentificador;
+            cout << "Digite o identificador do personagem que deseja remover: ";
+            cin >> indentificador;
+            removerLogico(vetor, quantidade, indentificador);
+        }
+        else if (opcao == 7)
         {
             cout << "Saindo do programa..." << endl;
             delete[] vetor;

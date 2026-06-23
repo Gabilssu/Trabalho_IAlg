@@ -14,6 +14,8 @@ void salvarArquivo(string nomeArquivo,
         return;
     }
 
+    removerFisico(vetor, quantidade);
+
     for (int i = 0; i < quantidade; i++)
     {
         if (vetor[i].identificador > 0)

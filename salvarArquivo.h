@@ -2,6 +2,7 @@
 #define SALVARARQUIVO_H
 
 #include "personagem.h"
+#include "remover.h"
 #include <string>
 
 using namespace std;
