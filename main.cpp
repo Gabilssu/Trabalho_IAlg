@@ -97,7 +97,8 @@ int main()
                 if (opcaoBusca == 1)
                 {
                     cout << "Qual id devo buscar? (Apenas números inteiros positivos)" << endl;
-                    cin >> comparador;
+                    cin.ignore();
+                    getline(cin, comparador);
                     buscarBinaria(vetor, comparador, quantidade);
                     cout << endl;
                     opcaoBusca = 6;
@@ -105,7 +106,8 @@ int main()
                 else if (opcaoBusca == 2)
                 {
                     cout << "Qual nome devo buscar?" << endl;
-                    cin >> comparador;
+                    cin.ignore();
+                    getline(cin, comparador);
                     buscarElementoIterativo(vetor, comparador, 2, quantidade);
                     cout << endl;
                     opcaoBusca = 6;
@@ -113,7 +115,8 @@ int main()
                 else if (opcaoBusca == 3)
                 {
                     cout << "Qual autor devo buscar?" << endl;
-                    cin >> comparador;
+                    cin.ignore();
+                    getline(cin, comparador);
                     buscarElementoIterativo(vetor, comparador, 3, quantidade);
                     cout << endl;
                     opcaoBusca = 6;
@@ -121,7 +124,8 @@ int main()
                 else if (opcaoBusca == 4)
                 {
                     cout << "Qual título devo buscar?" << endl;
-                    cin >> comparador;
+                    cin.ignore();
+                    getline(cin, comparador);
                     buscarElementoIterativo(vetor, comparador, 4, quantidade);
                     cout << endl;
                     opcaoBusca = 6;
@@ -129,7 +133,8 @@ int main()
                 else if (opcaoBusca == 5)
                 {
                     cout << "Qual espécie devo buscar?" << endl;
-                    cin >> comparador;
+                    cin.ignore();
+                    getline(cin, comparador);
                     buscarElementoIterativo(vetor, comparador, 5, quantidade);
                     cout << endl;
                     opcaoBusca = 6;
@@ -177,7 +182,7 @@ int main()
         else
         {
             cout << "Opção inválida!" << endl;
-            cout << "Digite apenas valores válidos (1-5)" << endl;
+            cout << "Digite apenas valores válidos (1-7)" << endl;
         }
     }
 
