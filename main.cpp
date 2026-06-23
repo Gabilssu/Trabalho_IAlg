@@ -9,12 +9,15 @@
 #include "inserirFinal.h"
 #include "inserirOrdenado.h"
 #include "criarNovoPersonagem.h"
+#include "buscaElemento.h"
 
 using namespace std;
 int main()
 {
     int opcao = -1;
     int opcaoInsercao = -1;
+    int opcaoBusca = -1;
+    string comparador;
     //se quiser coloca mais elementos aqui, botei so o básico
     Personagem *vetor;
     Personagem novoPersonagem;
@@ -28,13 +31,14 @@ int main()
                     quantidade,
                     capacidade);
 
-    while (opcao !=4)
+    while (opcao !=5)
     {
         cout << endl << "Digite o número referente ao que você deseja fazer: "<< endl;
         cout << "1 - Inserir elemento" << endl;
         cout << "2 - Mostrar elementos" << endl;
-        cout << "3 - Salvar arquivo" << endl;
-        cout << "4 - Sair" << endl;
+        cout << "3 - Buscar elementos" << endl;
+        cout << "4 - Salvar arquivo" << endl;
+        cout << "5 - Sair" << endl;
         cin >> opcao;
         if (opcao == 1)
         {
@@ -74,10 +78,65 @@ int main()
         }
         else if (opcao == 3)
         {
+            opcaoBusca = -1;
+            while (opcaoBusca!=6)
+            {
+                cout << "O que você deseja buscar?" << endl;
+                cout << "1 - Identificador" << endl;
+                cout << "2 - Nome" << endl;
+                cout << "3 - Autor" << endl;
+                cout << "4 - Título" << endl;
+                cout << "5 - Espécie" << endl;
+                cout << "6 - Voltar" << endl;
+                cin >> opcaoBusca;
+                if (opcaoBusca == 1)
+                {
+                    cout << "Qual id devo buscar?" << endl;
+                    cin >> comparador;
+                    buscarElementoIterativo(vetor, comparador, 1, quantidade);
+                    cout << endl;
+                }
+                else if (opcaoBusca == 2)
+                {
+                    cout << "Qual nome devo buscar?" << endl;
+                    cin >> comparador;
+                    buscarElementoIterativo(vetor, comparador, 2, quantidade);
+                    cout << endl;
+                }
+                else if (opcaoBusca == 3)
+                {
+                    cout << "Qual autor devo buscar?" << endl;
+                    cin >> comparador;
+                    buscarElementoIterativo(vetor, comparador, 3, quantidade);
+                    cout << endl;
+                }
+                else if (opcaoBusca == 4)
+                {
+                    cout << "Qual título devo buscar?" << endl;
+                    cin >> comparador;
+                    buscarElementoIterativo(vetor, comparador, 4, quantidade);
+                    cout << endl;
+                }
+                else if (opcaoBusca == 5)
+                {
+                    cout << "Qual espécie devo buscar?" << endl;
+                    cin >> comparador;
+                    buscarElementoIterativo(vetor, comparador, 5, quantidade);
+                    cout << endl;
+                }
+                else if (opcaoBusca != 6)
+                {
+                    cout << "Opção inválida!" << endl;
+                    cout << "Digite apenas valores válidos (1-6)" << endl;
+                }
+            }
+        }
+        else if (opcao == 4)
+        {
             cout << "Salvando arquivo..." << endl;
             salvarArquivo("saida.csv", vetor, quantidade);
         }
-        else if (opcao == 4)
+        else if (opcao == 5)
         {
             cout << "Saindo do programa..." << endl;
             delete[] vetor;
