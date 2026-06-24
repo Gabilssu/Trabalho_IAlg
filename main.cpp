@@ -48,31 +48,55 @@ int main()
         if (opcao == 1)
         {
             opcaoInsercao = -1;
-            while (opcaoInsercao!=3)
+            while (opcaoInsercao!=6)
             {
                 cout << "A inserção deve ser no final do arquivo ou ordenada?" << endl;
                 cout << "1 - No final do arquivo" << endl;
-                cout << "2 - Ordenada" << endl;
-                cout << "3 - Voltar" << endl;
+                cout << "2 - Ordenada por nome" << endl;
+                cout << "3 - Ordenada por autor" << endl;
+                cout << "4 - Ordenada por título" << endl;
+                cout << "5 - Ordenada por espécie" << endl;
+                cout << "6 - Voltar" << endl;
                 cin >> opcaoInsercao;
                 if (opcaoInsercao == 1)
                 {
                     criarNovoPersonagem(novoPersonagem);
                     inserirFinal(vetor, novoPersonagem, quantidade, capacidade);   
                     cout << "Inserindo novo personagem (final)..." << endl;
-                    opcaoInsercao = 3;
+                    opcaoInsercao = 6;
                 }
                 else if (opcaoInsercao == 2)
                 {
                     criarNovoPersonagem(novoPersonagem);
                     inserirOrdenado(vetor, novoPersonagem, quantidade, capacidade);
-                    cout << "Inserindo novo personagem (ordenado)..." << endl;
-                    opcaoInsercao = 3;
+                    cout << "Inserindo novo personagem (ordenado por nome)..." << endl;
+                    opcaoInsercao = 6;
                 }
-                else if (opcaoInsercao != 3)
+                else if (opcaoInsercao == 3)
+                {
+                    criarNovoPersonagem(novoPersonagem);
+                    inserirOrdenado(vetor, novoPersonagem, quantidade, capacidade);
+                    cout << "Inserindo novo personagem (ordenado por nome)..." << endl;
+                    opcaoInsercao = 6;
+                }
+                else if (opcaoInsercao == 4)
+                {
+                    criarNovoPersonagem(novoPersonagem);
+                    inserirOrdenado(vetor, novoPersonagem, quantidade, capacidade);
+                    cout << "Inserindo novo personagem (ordenado por nome)..." << endl;
+                    opcaoInsercao = 6;
+                }
+                else if (opcaoInsercao == 5)
+                {
+                    criarNovoPersonagem(novoPersonagem);
+                    inserirOrdenado(vetor, novoPersonagem, quantidade, capacidade);
+                    cout << "Inserindo novo personagem (ordenado por nome)..." << endl;
+                    opcaoInsercao = 6;
+                }
+                else if (opcaoInsercao != 6)
                 {
                     cout << "Opção inválida!" << endl;
-                    cout << "Digite apenas valores válidos (1-3)" << endl;
+                    cout << "Digite apenas valores válidos (1-6)" << endl;
                 }
             }
         }

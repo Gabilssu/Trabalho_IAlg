@@ -4,17 +4,18 @@
 
 void criarNovoPersonagem(Personagem &novoPersonagem)
 {
-    cout << "Digite o nome do personagem: "<< endl;
-    cin >> novoPersonagem.nome;
+    cin.ignore();
+    cout << "Digite o nome do personagem: " << endl;
+    getline(cin, novoPersonagem.nome);
 
-    cout << "Digite o criador do personagem: "<< endl;
-    cin >> novoPersonagem.criador;
+    cout << "Digite o criador do personagem: " << endl;
+    getline(cin, novoPersonagem.criador);
 
-    cout << "Digite o titulo: "<< endl;
-    cin >> novoPersonagem.titulo;
+    cout << "Digite o titulo: " << endl;
+    getline(cin, novoPersonagem.titulo);
 
-    cout << "Digite a especie do personagem: "<< endl;
-    cin >> novoPersonagem.especie;
+    cout << "Digite a especie do personagem: " << endl;
+    getline(cin, novoPersonagem.especie);
 
     cout << "Informações registradas com sucesso" << endl;
     cout << "----------------------------------------" << endl;
