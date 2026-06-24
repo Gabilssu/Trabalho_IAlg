@@ -6,8 +6,7 @@
 #include "carregarArquivo.h"
 #include "salvarArquivo.h"
 #include "mostrarElemento.h"
-#include "inserirFinal.h"
-#include "inserirOrdenado.h"
+#include "inserir.h"
 #include "criarNovoPersonagem.h"
 #include "buscaElemento.h"
 #include "buscaBinaria.h"
@@ -68,29 +67,29 @@ int main()
                 else if (opcaoInsercao == 2)
                 {
                     criarNovoPersonagem(novoPersonagem);
-                    inserirOrdenado(vetor, novoPersonagem, quantidade, capacidade);
+                    inserirOrdenado(vetor, novoPersonagem, quantidade, capacidade, 2);
                     cout << "Inserindo novo personagem (ordenado por nome)..." << endl;
                     opcaoInsercao = 6;
                 }
                 else if (opcaoInsercao == 3)
                 {
                     criarNovoPersonagem(novoPersonagem);
-                    inserirOrdenado(vetor, novoPersonagem, quantidade, capacidade);
-                    cout << "Inserindo novo personagem (ordenado por nome)..." << endl;
+                    inserirOrdenado(vetor, novoPersonagem, quantidade, capacidade, 3);
+                    cout << "Inserindo novo personagem (ordenado por autor)..." << endl;
                     opcaoInsercao = 6;
                 }
                 else if (opcaoInsercao == 4)
                 {
                     criarNovoPersonagem(novoPersonagem);
-                    inserirOrdenado(vetor, novoPersonagem, quantidade, capacidade);
-                    cout << "Inserindo novo personagem (ordenado por nome)..." << endl;
+                    inserirOrdenado(vetor, novoPersonagem, quantidade, capacidade, 4);
+                    cout << "Inserindo novo personagem (ordenado por título)..." << endl;
                     opcaoInsercao = 6;
                 }
                 else if (opcaoInsercao == 5)
                 {
                     criarNovoPersonagem(novoPersonagem);
-                    inserirOrdenado(vetor, novoPersonagem, quantidade, capacidade);
-                    cout << "Inserindo novo personagem (ordenado por nome)..." << endl;
+                    inserirOrdenado(vetor, novoPersonagem, quantidade, capacidade, 5);
+                    cout << "Inserindo novo personagem (ordenado por espécie)..." << endl;
                     opcaoInsercao = 6;
                 }
                 else if (opcaoInsercao != 6)
