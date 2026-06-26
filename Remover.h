@@ -8,6 +8,7 @@ void removerLogico(Personagem vetor[],
                     int identificador);
 
 void removerFisico(Personagem*& vetor,
-                    int &quantidade);
+                    int &quantidade,
+                    int &capacidade);
 
 #endif

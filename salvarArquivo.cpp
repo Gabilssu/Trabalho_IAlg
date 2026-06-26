@@ -4,7 +4,8 @@
 
 void salvarArquivo(string nomeArquivo,
                    Personagem*& vetor,
-                   int &quantidade)
+                   int &quantidade,
+                   int &capacidade)
 {
     ofstream arquivo(nomeArquivo);
 
@@ -14,7 +15,7 @@ void salvarArquivo(string nomeArquivo,
         return;
     }
 
-    removerFisico(vetor, quantidade);
+    removerFisico(vetor, quantidade, capacidade);
 
     for (int i = 0; i < quantidade; i++)
     {

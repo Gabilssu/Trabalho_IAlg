@@ -19,7 +19,7 @@ void removerLogico(Personagem vetor[], int quantidade, int identificador){
          << " nao encontrado." << endl;
 }
 
-void removerFisico(Personagem*& vetor, int &quantidade) {
+void removerFisico(Personagem*& vetor, int &quantidade, int &capacidade) {
     int novaQuantidade = 0;
     bool removido = false;
 
@@ -45,6 +45,7 @@ void removerFisico(Personagem*& vetor, int &quantidade) {
         delete[] vetor;
         vetor = novoVetor;
         quantidade = novaQuantidade;
+        capacidade = novaQuantidade;
 
         cout << "Remocao fisica realizada com sucesso." << endl;
     }

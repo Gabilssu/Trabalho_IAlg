@@ -9,6 +9,7 @@ using namespace std;
 
 void salvarArquivo(string nomeArquivo,
                    Personagem*& vetor,
-                   int &quantidade);
+                   int &quantidade,
+                   int &capacidade);
 
 #endif
