@@ -19,20 +19,33 @@ void removerLogico(Personagem vetor[], int quantidade, int identificador){
          << " nao encontrado." << endl;
 }
 
-void removerFisico(Personagem vetor[], int &quantidade){
-
+void removerFisico(Personagem*& vetor, int &quantidade) {
     int novaQuantidade = 0;
+    bool removido = false;
 
-    for (int i = 0; i < quantidade; i++)
-    {
-        if (vetor[i].identificador != -1)
-        {
-            vetor[novaQuantidade] = vetor[i];
+    for (int i = 0; i < quantidade; i++) {
+        if (vetor[i].identificador != -1) {
             novaQuantidade++;
+        } else {
+            removido = true;
         }
     }
 
-    quantidade = novaQuantidade;
+    if (removido) {
+        Personagem* novoVetor = new Personagem[novaQuantidade > 0 ? novaQuantidade : 1];
+        int indiceNovo = 0;
 
-    cout << "Remocao fisica realizada com sucesso." << endl;
+        for (int i = 0; i < quantidade; i++) {
+            if (vetor[i].identificador != -1) {
+                novoVetor[indiceNovo] = vetor[i];
+                indiceNovo++;
+            }
+        }
+
+        delete[] vetor;
+        vetor = novoVetor;
+        quantidade = novaQuantidade;
+
+        cout << "Remocao fisica realizada com sucesso." << endl;
+    }
 }

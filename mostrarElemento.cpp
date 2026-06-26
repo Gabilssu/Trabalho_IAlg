@@ -4,7 +4,7 @@
 void mostrarElemento(Personagem vetor[],
                      int inicio,
                      int fim,
-                     int quantidade)
+                     int &quantidade)
 {
     if (inicio < 0)
         inicio = 0;

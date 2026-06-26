@@ -3,8 +3,8 @@
 #include <iostream>
 
 void salvarArquivo(string nomeArquivo,
-                   Personagem vetor[],
-                   int quantidade)
+                   Personagem*& vetor,
+                   int &quantidade)
 {
     ofstream arquivo(nomeArquivo);
 
