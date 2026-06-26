@@ -3,6 +3,29 @@
 #include <cctype>
 #include <iostream>
 
+int acharId(Personagem *vetor, 
+            int quantidade)
+{
+    int auxId = 1;
+    while (true)
+    {
+        int contador = 0;
+
+        for (int i = 0; i < quantidade; i++)
+        {
+            if (vetor[i].identificador != auxId)
+            {
+                contador++;
+            }
+        }
+
+        if (contador == quantidade)
+        {
+            return auxId;
+        }
+        auxId++;
+    }
+}
 void inserirFinal(Personagem *&vetor, 
                   Personagem &novoPersonagem, 
                   int &quantidade, 
@@ -19,7 +42,7 @@ void inserirFinal(Personagem *&vetor,
     }
     else
     {
-        novoPersonagem.identificador = quantidade+1;
+        novoPersonagem.identificador = acharId(vetor,quantidade);
     }
     vetor[quantidade] = novoPersonagem;
     quantidade++;
@@ -102,7 +125,7 @@ void inserirOrdenado(Personagem *&vetor,
     }
     else
     {
-        novoPersonagem.identificador = quantidade+1;
+        novoPersonagem.identificador = acharId(vetor,quantidade);
     }
     vetor[posicao] = novoPersonagem;
     quantidade++;
