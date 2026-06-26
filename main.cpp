@@ -172,7 +172,7 @@ int main()
         else if (opcao == 4)
         {
             cout << "Salvando arquivo..." << endl;
-            salvarArquivo("saida.csv", vetor, quantidade);
+            salvarArquivo("personagens.csv", vetor, quantidade);
         }
         else if (opcao == 5)
         {
