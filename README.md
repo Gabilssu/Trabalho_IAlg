@@ -3,7 +3,7 @@
 
 **Tema:** Personagens de Jogos
 
-**Integrantes:** ______________________________________
+**Integrantes:** Gabriel de Avelas Silva - Luiza Mara Fernandes Costa - Lucas Aguilar de Oliveira
 
 ## Introdução
 
