@@ -105,18 +105,14 @@ void inserirOrdenado(Personagem *&vetor,
             posicao++;
         }
     }
-    for (int i = quantidade; i > posicao; i--)
-    {
-        vetor[i] = vetor[i - 1];
-    }
 
     if (achou==false)
     {
-        cout << "O elemento será adicionado no final (id: " << posicao << ")" << endl;
+        cout << "O elemento será adicionado no final"<< endl;
     }
     else
     {
-        cout << "O elemento será adicionado na posição correspondente (id: " << posicao << ")" << endl;
+        cout << "O elemento será adicionado na posição correspondente" << endl;
     }
 
     if (quantidade == 0)
@@ -126,6 +122,10 @@ void inserirOrdenado(Personagem *&vetor,
     else
     {
         novoPersonagem.identificador = acharId(vetor,quantidade);
+    }
+    for (int i = quantidade; i > posicao; i--)
+    {
+        vetor[i] = vetor[i - 1];
     }
     vetor[posicao] = novoPersonagem;
     quantidade++;
